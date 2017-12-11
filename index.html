@@ -1,0 +1,146 @@
+<!-- <meta http-equiv="refresh" content="2; URL=" /> -->
+<html>
+  <head>
+    <title>Magnovite Season 7 | 2017</title>
+    <link href="fonts/Roboto-Light.ttf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+     <link rel='stylesheet' href='style.css'>
+     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+     <link rel='stylesheet' href='responsive.css' media='screen and (max-width:1920px)'>
+  </head>
+  <body>
+   <div id="container" class="container">
+   <div class="vignette"></div>
+    <!--POPUP Tutorial window starts here -->
+    <!--POPUP Tutorial window starts here-->
+      <img src="images/tut.gif" class="pop">
+    <!--POPUP Tutorial window ends here-->
+    <ul id="scene">
+       <img src="images/logo.png" class="christ" style="float:right;">
+        <div class="layer one" data-depth="0.15"><img src="images/about.png" class='oneImg' onClick='window.location.href = "about.html";'></div>
+      <br />
+      <a href='index.html'>
+        <div id="droppable" class="layer two" data-depth="0.25"><img src="images/mag.png" class='twoImg'></div>
+      </a>
+      <br />
+      <a href='events.html'>
+        <div id="draggable1"  class="layer three" data-depth="0.35"><img src="images/events.png"  class='threeImg'></div>
+      </a>
+      <br />
+      <a href='workshops.html'>
+        <div id="draggable3" class="layer five" data-depth="0.75"><img src="images/workshops.png" class='fiveImg'></div>
+      </a>
+      <a href='login.html'>
+        <div id="draggable2" class="layer four" data-depth="0.55"><img src="images/login.png" class='fourImg'></div>
+      </a>
+      <img src="images/magno.png" class="title">
+      <div class="media">
+        <a href='contact.html'>
+          <img src="images/contactus.png" class='contactImg'>
+        </a>
+        <a href='https://www.facebook.com'>
+          <img src="images/facebookico.png" class='socialImg'>
+        </a>
+        <a href='https://www.youtube.com'>
+          <img src="images/youtuico.png" class='socialImg'>
+        </a>
+      </div>
+      <canvas id="c" style="z-index:-10;" class='theCanvas'></canvas>
+    </ul>
+
+
+  </div>
+    <script>
+      $(function() {
+      $("body").click(function(e) {
+          if (e.target.id == "canvas" || $(e.target).parents("#canvas").length) {
+            //Outside canvas
+            //dd
+          } else {
+            //In the canvas : Get the popup back to the hidden state
+            $(".pop").css('display','block');
+            $(".pop").animate({opacity:1},0);
+            $(".pop").animate({top:"-150%",opacity:0},"slow");
+            $('.vignette').css('box-shadow',' 0 0 0 rgba(0,0,0,0.0) inset');
+            $('.pop').css('display','hidden');
+            $('.pop').css('z-index','-10');
+            $('.vignette').css('display','hidden');
+            $('.vignette').css('z-index','-10');
+          }
+        });
+      })
+    </script>   
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js'></script>
+    <script  src="js/index1.js"></script>
+
+    <script src="jquery.parallax.js.download"></script>
+    <script>
+
+
+      var $html = $scene = $('#scene');
+      $scene.parallax();
+
+      doElsCollide = function(el1, el2) {
+          el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
+          el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
+          el2.offsetBottom = el2.offsetTop + el2.offsetHeight;
+          el2.offsetRight = el2.offsetLeft + el2.offsetWidth;
+          
+          return !((el1.offsetBottom < el2.offsetTop) ||
+                   (el1.offsetTop > el2.offsetBottom) ||
+                   (el1.offsetRight < el2.offsetLeft) ||
+                   (el1.offsetLeft > el2.offsetRight))
+    };
+    $( function() {
+      x=$(document).width();
+      if (x>1000) {
+        $('.vignette').css('box-shadow','0 0 600px rgba(0,0,0,0.9) inset');
+        $(".pop").css('display','block');
+        $(".pop").animate({opacity:0},0);
+        $(".pop").animate({top:"145%",opacity:1},"slow");
+      }
+      else{
+        $('.vignette').css('box-shadow','0 0 0px rgba(0,0,0,0.0) inset');
+      }
+      $( "#draggable1" ).draggable();
+      $( "#draggable2" ).draggable();
+      $( "#draggable3" ).draggable();
+      $( "#droppable" ).droppable({
+        drop: function( event, ui ) {
+
+      var el2 = document.getElementById('draggable1'),
+          el4 = document.getElementById('draggable2'),
+          el5 = document.getElementById('draggable3'),
+
+          el3 = document.getElementById('droppable');
+        
+
+      var i1 = (doElsCollide(el5, el3));
+      var i2 = (doElsCollide(el2, el3));
+      var i3 = (doElsCollide(el4, el3));
+      if(i1==true){
+         $( "#draggable3" ).toggle( "bounce", { times: 3 },650 );
+        location.href = 'workshops.html';  
+      }  
+      
+      if(i2==true){
+         $( "#draggable1" ).toggle( "bounce", { times: 3 },650 );
+        location.href = 'events.html';  
+      }
+      
+      if(i3==true){
+         $( "#draggable2" ).toggle( "bounce", { times: 3 },650 );
+               location.href = 'login.html';
+      }
+          
+        }
+      });
+    } );
+    </script>
+  </body>
+</html>
