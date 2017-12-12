@@ -1,3 +1,19 @@
+@media screen and (max-width:280){
+	.threeImg{
+		margin-left: -50px;
+	}
+	#c{
+		margin-top: -25%;
+	}
+	.title{
+		margin-top: 350px;
+		margin-left: 110px;
+		width:220px;
+		height:48px;
+	}
+	
+}
+
 @media screen and (max-width:1920px){
 	.threeImg{
 		margin-left: -50px;
@@ -5,8 +21,6 @@
 	#c{
 		margin-top: -25%;
 	}
-	
-	
 }
 
 @media screen and (max-width:1400px){
