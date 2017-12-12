@@ -17,6 +17,28 @@ canvas {
 .canvas{
 	
 }
+.loginPopup{
+	width:400px;
+	height:400px;
+	background: #ededed;
+	position: absolute;
+	z-index: -10;
+	margin-left: 45%;
+	border-radius: 50%;
+}
+.loginInp{
+	width: 95%;
+	height: 40px;
+	padding: 5px;
+	border: 0px;
+}
+.loginTitle{
+	margin-top: 35px;
+	font-size: 1.3em;
+}
+.loginClose{
+	margin-left: 500px;
+}
 .christ{
 	position: absolute;
 	margin-left: 80%;
