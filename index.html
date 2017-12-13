@@ -16,15 +16,21 @@
       <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" /> 
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
-
-      var first;
+      var position;
+      function showLog(){
+        $(".loginPopup").animate({opacity:0},0);
+        $(".loginPopup").animate({top:"145%",opacity:1},"slow");
+      }
       function hideLogin(){
         $(function() {
-           $('#draggable2').css('margin-top','40%');
-          $('#draggable2').css('margin-left','50%');
-          $('.loginPopup').css('z-index','-10');
-         
-
+            x= position.top;
+            if(x<0){
+              $('#draggable2').css('padding-top','240px');
+              $('#draggable2').css('padding-left','180px');
+            }
+            $(".loginPopup").css('display','block');
+            $(".loginPopup").animate({opacity:1},0);
+            $(".loginPopup").animate({top:"-60%",opacity:0},"slow");
         })
       }
     </script>
@@ -71,14 +77,16 @@
       </a>
       <br />
       <a href='events.html'>
-        <div class="layer three" data-depth="0.35"><div id="draggable1"><img src="images/events.png"  class='threeImg'></div></div>
+        <div class="layer three" id="draggable1" data-depth="0.35" style='margin-right:-100px;'>
+          <img src="images/events.png"  class='threeImg'>
+        </div>
       </a>
       <br />
       <a href='workshops.html'>
         <div id="draggable3" class="layer five" data-depth="0.75"><img src="images/workshops.png" class='fiveImg'></div>
       </a>
-      <a href='login.html'>
-        <div id="draggable2" class="layer four" data-depth="0.55"><img src="images/login.png" class='fourImg'></div>
+      <a href='#'>
+          <div id="draggable2" class="layer four" data-depth="0.55"><img onClick='showLog();' src="images/login.png" class='fourImg'></div>
       </a>
       <img src="images/magno.png" class="title">
       <div class="media">
@@ -114,6 +122,8 @@
             $('.pop').css('z-index','-10');
             $('.vignette').css('display','hidden');
             $('.vignette').css('z-index','-10');
+            var p = $( "#draggable2" );
+            position = p.position();
           }
         });
       })
@@ -151,6 +161,7 @@
       else{
         $('.vignette').css('box-shadow','0 0 0px rgba(0,0,0,0.0) inset');
       }
+
       $( "#draggable1" ).draggable();
       $( "#draggable2" ).draggable();
       $( "#draggable3" ).draggable();
@@ -173,11 +184,10 @@
       
       if(i2==true){
          $( "#draggable1" ).toggle( "bounce", { times: 3 },650 );
-        location.href = 'events.html';  
+         location.href = 'events.html';  
       }
       
       if(i3==true){
-         $('.loginPopup').css('z-index','10');  
       }
           
         }

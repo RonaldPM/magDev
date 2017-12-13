@@ -11,6 +11,9 @@ canvas {
   margin-left: -5%;
   overflow: hidden;
  }
+ a{
+ 	text-decoration: none;
+ }
 #scene{
 	
 }
@@ -22,9 +25,10 @@ canvas {
 	height:400px;
 	background: #ededed;
 	position: absolute;
-	z-index: -10;
+	z-index: 10;
 	margin-left: 45%;
 	border-radius: 50%;
+	margin-top: -60%;
 }
 .loginInp{
 	width: 95%;
@@ -62,6 +66,7 @@ canvas {
 	margin-top: -60%;
 	border-radius: 5px;
 }
+
 .one{
 	margin-top:13% ;
 	margin-left:55%;
@@ -79,7 +84,12 @@ canvas {
 .three{
 	margin-top:-4% ;
 	margin-left:34%;
+}
+#draggable1{
 
+}
+.three{
+	margin-left: 30%;
 }
 .media{
 	position: absolute;
