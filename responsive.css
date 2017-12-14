@@ -109,9 +109,12 @@
 	}
 
 	#c{
-		margin-top: -320px;
-		height:110%;
-		width: 110%;
+		margin-top: -335px;
+		height:150%;
+		width: 150%;
+	}
+	.loginPopup{
+		margin-top: -190%;
 	}
 	.pop{
 		visibility: hidden;
@@ -135,6 +138,7 @@
 	.three{
 		margin-top: -80px;
 		width: 50px;
+		padding-left: 90px;
 	}
 	.threeImg{
 		width: 120px;
@@ -146,7 +150,7 @@
 		width: 125px;
 	}
 	.five{
-		margin-top: 150px;
+		margin-top: 190px;
 	}
 	.fiveImg{
 		width: 125px;
