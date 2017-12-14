@@ -12,17 +12,34 @@
      <link rel='stylesheet' href='style.css'>
      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
      <link rel='stylesheet' href='responsive.css' media='screen and (max-width:1920px)'>
+     <script type="text/javascript" src="C:\Users\libin\OneDrive\Documents\GitHub\2\magDev\node_modules\bounce.js\bounce.js"></script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </head>
   <body>
    <div id="container" class="container">
    <div class="vignette"></div>
     <!--POPUP Tutorial window starts here -->
-    <!--POPUP Tutorial window starts here-->
-      <img src="images/tut.gif" class="pop">
+    <!--POPUP Tutorial window starts here
+       <img src="images/tut.gif" class="pop">-->
+       <img src="images/bg.png" class="pop1" >
+       <img src="images/developers.png" class="pop2 animation-target" id="pop12">
+       <img src="images/ron.png" class="pop3 animation-target">
+       <img src="images/ronald.png" class="pop4 animation-target">
+       <img src="images/arjun.png" class="pop5 animation-target">
+       <img src="images/venkat.png" class="pop6 animation-target">
+       <img src="images/lib.png" class="pop7 animation-target">
+       <img src="images/nik.png" class="pop8 animation-target">
+       <img src="images/yash.png" class="pop9 animation-target">
+       <!-- FAB button -->
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" id="closepop">
+  <i class="material-icons">close</i>
+</button>
     <!--POPUP Tutorial window ends here-->
     <ul id="scene">
        <img src="images/logo.png" class="christ" style="float:right;">
-        <div class="layer one" data-depth="0.15"><img src="images/about.png" class='oneImg' onClick='window.location.href = "about.html";'></div>
+        <div class="layer one animation-target" data-depth="0.15"><img src="images/about.png" class='oneImg' onClick='window.location.href = "about.html";'></div>
       <br />
       <a href='index.html'>
         <div id="droppable" class="layer two" data-depth="0.25"><img src="images/mag.png" class='twoImg'></div>
@@ -39,6 +56,7 @@
         <div id="draggable2" class="layer four" data-depth="0.55"><img src="images/login.png" class='fourImg'></div>
       </a>
       <img src="images/magno.png" class="title">
+      <img src="images/developers2.png" class="title2" id="tle2">
       <div class="media">
         <a href='contact.html'>
           <img src="images/contactus.png" class='contactImg'>
@@ -69,7 +87,7 @@
             $('.vignette').css('box-shadow',' 0 0 0 rgba(0,0,0,0.0) inset');
             $('.pop').css('display','hidden');
             $('.pop').css('z-index','-10');
-            $('.vignette').css('display','hidden');
+            //$('.vignette').css('display','hidden');
             $('.vignette').css('z-index','-10');
           }
         });
@@ -79,6 +97,86 @@
     <script  src="js/index1.js"></script>
 
     <script src="jquery.parallax.js.download"></script>
+    <script>
+
+    $('#closepop').click(function(){
+      $(".pop1").animate({opacity:1},1);
+      $(".pop1,.pop2,.pop3,.pop4,.pop5,.pop6,.pop7,.pop8,.pop9,#closepop").animate({top:"-25%",opacity:0},"slow");
+      $('.pop2,.pop3,.pop4,.pop5,.pop6,.pop7,.pop8,.pop9').css('z-index','-10');
+    })
+     
+      $("#tle2").click(function() {
+
+        $(".pop1").css('display','block');
+        $(".pop1").animate({opacity:0},0);
+        $(".pop1,.pop2,.pop3,.pop4,.pop5,.pop6,.pop7,.pop8,.pop9,#closepop").animate({top:"25%",opacity:1},"slow");
+        //$('.vignette').css('display','visible');
+        $('.vignette').css('z-index','10');
+        $('.vignette').css('box-shadow','0 0 600px rgba(0,0,0,0.9) inset');
+        $('.pop1').fadeIn();
+
+    var p1 = document.getElementsByClassName('pop2')[0];
+    var p2 = document.getElementsByClassName('pop3')[0];
+    var p3 = document.getElementsByClassName('pop4')[0];
+    var p4 = document.getElementsByClassName('pop5')[0];
+    var p5 = document.getElementsByClassName('pop6')[0];
+    var p6 = document.getElementsByClassName('pop7')[0];
+    var p7 = document.getElementsByClassName('pop8')[0];
+    var p8 = document.getElementsByClassName('pop9')[0];
+
+    p1.style.webkitAnimation = 'none';
+    p2.style.webkitAnimation = 'none';
+    p3.style.webkitAnimation = 'none';
+    p4.style.webkitAnimation = 'none';
+    p5.style.webkitAnimation = 'none';
+    p6.style.webkitAnimation = 'none';
+    p7.style.webkitAnimation = 'none';
+    p8.style.webkitAnimation = 'none';
+    var x=900,y=400;
+    setTimeout(function() {
+      $('.pop2').css('z-index','10');
+        p1.style.webkitAnimation = '';
+        
+    }, x );
+     setTimeout(function() {
+      $('.pop3').css('z-index','10');
+        p2.style.webkitAnimation = '';
+        
+    }, x+y);
+      setTimeout(function() {
+      $('.pop4').css('z-index','10');
+        p3.style.webkitAnimation = '';
+        
+    }, x+3*y);
+       setTimeout(function() {
+      $('.pop5').css('z-index','10');
+        p4.style.webkitAnimation = '';
+        
+    }, x+5*y);
+        setTimeout(function() {
+      $('.pop6').css('z-index','10');
+        p5.style.webkitAnimation = '';
+        
+    }, x+7*y);
+         setTimeout(function() {
+      $('.pop7').css('z-index','10');
+        p6.style.webkitAnimation = '';
+        
+    }, x+2*y);
+          setTimeout(function() {
+      $('.pop8').css('z-index','10');
+        p7.style.webkitAnimation = '';
+        
+    }, x+4*y);
+           setTimeout(function() {
+      $('.pop9').css('z-index','10');
+        p8.style.webkitAnimation = '';
+        
+    }, x+6*y);
+});
+
+  
+    </script>
     <script>
 
 
@@ -96,6 +194,7 @@
                    (el1.offsetRight < el2.offsetLeft) ||
                    (el1.offsetLeft > el2.offsetRight))
     };
+
     $( function() {
       x=$(document).width();
       if (x>1000) {
