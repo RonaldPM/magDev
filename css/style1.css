@@ -11,16 +11,12 @@ canvas {
   margin-left: -5%;
   overflow: hidden;
  }
- a{
- 	text-decoration: none;
- }
 #scene{
 	
 }
 .canvas{
 	
 }
-<<<<<<< HEAD
 
 
 .animation-target {
@@ -90,31 +86,6 @@ canvas {
 }
 
 
-=======
-.loginPopup{
-	width:400px;
-	height:400px;
-	background: #ededed;
-	position: absolute;
-	z-index: 10;
-	margin-left: 45%;
-	border-radius: 50%;
-	margin-top: -60%;
-}
-.loginInp{
-	width: 95%;
-	height: 40px;
-	padding: 5px;
-	border: 0px;
-}
-.loginTitle{
-	margin-top: 35px;
-	font-size: 1.3em;
-}
-.loginClose{
-	margin-left: 500px;
-}
->>>>>>> 2cb82ef2f87495fcc3ceeb467fa5a19b7b887b9a
 .christ{
 	position: absolute;
 	margin-left: 80%;
@@ -198,7 +169,6 @@ canvas {
 	margin-top: -60%;
 	border-radius: 5px;
 }
-
 .one{
 	margin-top:13% ;
 	margin-left:55%;
@@ -216,12 +186,7 @@ canvas {
 .three{
 	margin-top:-4% ;
 	margin-left:34%;
-}
-#draggable1{
 
-}
-.three{
-	margin-left: 30%;
 }
 .media{
 	position: absolute;

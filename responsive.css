@@ -1,19 +1,3 @@
-@media screen and (max-width:2890){
-	.threeImg{
-		margin-left: -50px;
-	}
-	#c{
-		margin-top: -25%;
-	}
-	.title{
-		padding-top: 350px;
-		margin-left: 110px;
-		width:220px;
-		height:48px;
-	}
-	
-}
-
 @media screen and (max-width:1920px){
 	.threeImg{
 		margin-left: -50px;
@@ -21,6 +5,8 @@
 	#c{
 		margin-top: -25%;
 	}
+	
+	
 }
 
 @media screen and (max-width:1400px){
@@ -44,11 +30,10 @@
 		width: 150px;
 		height: 170px;
 	}
-	.two{
-	}
 	.threeImg{
 		width: 150px;
-		margin-left: -130px;
+		margin-left: -50px;
+		
 	}
 	.four{
 		margin-top: 290px;
@@ -109,12 +94,9 @@
 	}
 
 	#c{
-		margin-top: -335px;
-		height:150%;
-		width: 150%;
-	}
-	.loginPopup{
-		margin-top: -190%;
+		margin-top: -320px;
+		height:110%;
+		width: 110%;
 	}
 	.pop{
 		visibility: hidden;
@@ -138,7 +120,6 @@
 	.three{
 		margin-top: -80px;
 		width: 50px;
-		padding-left: 90px;
 	}
 	.threeImg{
 		width: 120px;
@@ -150,7 +131,7 @@
 		width: 125px;
 	}
 	.five{
-		margin-top: 190px;
+		margin-top: 150px;
 	}
 	.fiveImg{
 		width: 125px;
