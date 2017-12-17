@@ -56,7 +56,7 @@
         <center>
         <div class='loginTitle'>Login</div>
         <br /><br />
-        <form action="#">
+        <form action="login.php" method='post'>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="email" id="email">
             <label class="mdl-textfield__label" for="sample3">Email</label>
@@ -97,9 +97,9 @@
       <br />
 
       <div id="draggable3" class="layer five" data-depth="0.75">
-        <a href='workshops.html'>
-          <img src="images/workshops.png" class='fiveImg'>
-        </a>
+          <a href='workshops.html' style=''>
+            <img src="images/workshops.png" class='fiveImg'>
+          </a>
       </div>
 
       <a href='#'>
@@ -141,7 +141,7 @@
             $('.pop').css('display','hidden');
             $('.pop').css('z-index','-10');
             $('.vignette').css('display','hidden');
-            $('.vignette').css('z-index','-10');
+            $('.vignette').css('z-index','-50');
             var p = $( "#draggable2" );
             position = p.position();
           }
