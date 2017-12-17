@@ -16,12 +16,63 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+ <script>
+      var position;
+      function showLog(){
+        $(".loginPopup").animate({opacity:0},0);
+        $(".loginPopup").animate({top:"145%",opacity:1},"slow");
+      }
+      function hideLogin(){
+        $(function() {
+           var x= position.top;
+            if(x<0){
+              wid=$(document).width();
+              if (wid>1000) {
+                $('#draggable2').css('padding-top','240px');
+                $('#draggable2').css('padding-left','180px');
+              }
+              else{
+                $('#draggable2').css('padding-top','7%');
+                $('#draggable2').css('padding-left','25px');
+              }
+            }
+            $(".loginPopup").css('display','block');
+            $(".loginPopup").animate({opacity:1},0);
+            $(".loginPopup").animate({top:"-60%",opacity:0},"slow");
+        })
+      }
+    </script>
   </head>
   <body>
    <div id="container" class="container">
    <div class="vignette"></div>
     <!--POPUP Tutorial window starts here -->
     <!--POPUP Tutorial window starts here-->
+    <div class='loginPopup'>
+          <!-- Textfield with Floating Label -->
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" onClick="hideLogin()" style='margin-left:300px;margin-top:15px;background:#C62828;color:#fff;'>
+          <i class="material-icons">close</i>
+        </button>
+        <center>
+        <div class='loginTitle'>Login</div>
+        <br /><br />
+        <form action="login.php" method='post'>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="email" id="email">
+            <label class="mdl-textfield__label" for="sample3">Email</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="password" id="password">
+            <label class="mdl-textfield__label" for="sample3">Password</label>
+          </div>
+          <br /><BR />
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" style='background:#009688;color:#fff;border-radius:25px;width:100px;height:40px;'>
+            Login
+          </button>
+        </form>
+      </center>
+
+      </div>
        <img src="images/tut.gif" class="pop">
        <img src="images/bg.png" class="pop1" >
        <img src="images/developers.png" class="pop2 animation-target" id="pop12">
@@ -39,7 +90,7 @@
     <!--POPUP Tutorial window ends here-->
     <ul id="scene">
     <a href="http://www.christuniversity.in">
-       <img src="images/logo.png" class="christ animation-target" style="float:right;">
+       <img src="images/logo.png" class="christ" style="float:right;">
        </a>
         <div class="layer one" data-depth="0.15"><img src="images/about.png" class='oneImg' onClick='window.location.href = "about.html";'></div>
       <br />
@@ -54,12 +105,15 @@
       <a href='workshops.html'>
         <div id="draggable3" class="layer five" data-depth="0.75"><img src="images/workshops.png" class='fiveImg'></div>
       </a>
-      <a href='login.html'>
-        <div id="draggable2" class="layer four" data-depth="0.55"><img src="images/login.png" class='fourImg'></div>
+     
+       <a href='#'>
+        <div id="draggable2" class="layer four" data-depth="0.55">
+          <img onClick='showLog();' src="images/login.png" class='fourImg'>
+        </div>
       </a>
-      <img src="images/magno.png" class="title animation-target">
+      <img src="images/magno.png" class="title">
       <img src="images/developers2.png" class="title2 animation-target" id="tle2">
-      <div class="media animation-target">
+      <div class="media">
         <a href='contact.html'>
           <img src="images/contactus.png" class='contactImg'>
         </a>
@@ -75,6 +129,7 @@
 
 
   </div>
+  
     <script>
       $(function() {
       $("body").click(function(e) {
@@ -91,6 +146,8 @@
             $('.pop').css('z-index','-10');
             //$('.vignette').css('display','hidden');
             $('.vignette').css('z-index','-10');
+             var p = $( "#draggable2" );
+            position = p.position();
           }
         });
       })
@@ -235,8 +292,6 @@
       }
       
       if(i3==true){
-         $( "#draggable2" ).toggle( "bounce", { times: 3 },650 );
-               location.href = 'login.html';
       }
           
         }
