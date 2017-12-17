@@ -87,7 +87,7 @@ function handleEvent(e) {
     });
 
     var particles = [];
-    for (var i=0; i<35; i++) {
+    for (var i=0; i<32; i++) {
       var particle = new Circle({
         x: e.pageX,
         y: e.pageY,
