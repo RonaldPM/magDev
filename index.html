@@ -74,15 +74,17 @@
 
       </div>
        <img src="images/tut.gif" class="pop">
-       <img src="images/bg.png" class="pop1" >
-       <img src="images/developers.png" class="pop2 animation-target" id="pop12">
-       <img src="images/ron.png" class="pop3 animation-target">
-       <img src="images/ronald.png" class="pop4 animation-target">
-       <img src="images/arjun.png" class="pop5 animation-target">
-       <img src="images/venkat.png" class="pop6 animation-target">
-       <img src="images/lib.png" class="pop7 animation-target">
-       <img src="images/nik.png" class="pop8 animation-target">
-       <img src="images/yash.png" class="pop9 animation-target">
+       <div class='names'>
+         <img src="images/bg.png" class="pop1" >
+         <img src="images/developers.png" class="pop2 animation-target" id="pop12">
+         <img src="images/ron.png" class="pop3 animation-target">
+         <img src="images/ronald.png" class="pop4 animation-target">
+         <img src="images/arjun.png" class="pop5 animation-target">
+         <img src="images/venkat.png" class="pop6 animation-target">
+         <img src="images/lib.png" class="pop7 animation-target">
+         <img src="images/nik.png" class="pop8 animation-target">
+         <img src="images/yash.png" class="pop9 animation-target">
+        </div>
        <!-- FAB button -->
 <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" id="closepop">
   <i class="material-icons">close</i>
@@ -160,7 +162,7 @@
 
     $('#closepop').click(function(){
       $(".pop1").animate({opacity:1},1);
-      $(".pop1,.pop2,.pop3,.pop4,.pop5,.pop6,.pop7,.pop8,.pop9,#closepop").animate({top:"-25%",opacity:0},"slow");
+      $(".pop1,.pop2,.pop3,.pop4,.pop5,.pop6,.pop7,.pop8,.pop9,#closepop").animate({top:"-37.5%",opacity:0},"slow");
       $('.pop2,.pop3,.pop4,.pop5,.pop6,.pop7,.pop8,.pop9').css('z-index','-10');
     })
      
@@ -168,7 +170,7 @@
 
         $(".pop1").css('display','block');
         $(".pop1").animate({opacity:0},0);
-        $(".pop1,.pop2,.pop3,.pop4,.pop5,.pop6,.pop7,.pop8,.pop9,#closepop").animate({top:"25%",opacity:1},"slow");
+        $(".pop1,.pop2,.pop3,.pop4,.pop5,.pop6,.pop7,.pop8,.pop9,#closepop").animate({top:"37.5%",opacity:1},"slow");
         //$('.vignette').css('display','visible');
         $('.vignette').css('z-index','10');
         $('.vignette').css('box-shadow','0 0 600px rgba(0,0,0,0.9) inset');
